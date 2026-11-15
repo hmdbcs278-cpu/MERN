@@ -1,0 +1,1425 @@
+css
+/* =========================================
+   1. CSS DESIGN TOKENS
+========================================= */
+
+:root {
+    --background: #edf3f6;
+
+    --primary: #173d55;
+
+    --secondary: #087b7d;
+
+    --dark-green: #153f43;
+
+    --hero-green: #285b4b;
+
+    --light-green: #dfeee5;
+
+    --card-background: #f5f9f7;
+
+    --white: #ffffff;
+
+    --text: #203e54;
+
+    --muted: #60788b;
+
+    --border: #cbd9e2;
+
+    --gold: #e2b24c;
+
+    --heading-font: "Poppins", sans-serif;
+
+    --body-font: "Roboto", sans-serif;
+
+    --font-size: 16px;
+
+    --small-space: 10px;
+
+    --medium-space: 20px;
+
+    --large-space: 35px;
+
+    --radius: 10px;
+
+    --shadow: 0 8px 20px rgba(20, 55, 50, 0.10);
+}
+
+
+/* =========================================
+   2. UNIVERSAL RESET
+========================================= */
+
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   3. BODY
+========================================= */
+
+body {
+    background-color: var(--background);
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size: var(--font-size);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   4. PAGE HEADER
+========================================= */
+
+.page-header {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 0;
+}
+
+.course {
+    color: var(--secondary);
+
+    font-family: var(--heading-font);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.page-header h1 {
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+.subtitle {
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   5. WEBSITE CONTAINER
+========================================= */
+
+.website {
+    width: 92%;
+
+    max-width: 1200px;
+
+    min-height: 1100px;
+
+    margin: 0 auto;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 0 0 var(--radius) var(--radius);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   6. NAVBAR
+========================================= */
+
+.navbar {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background-color: var(--dark-green);
+
+    border-bottom: 2px solid #d1e0d7;
+}
+
+
+/* Logo */
+
+.logo {
+    display: inline-block;
+
+    color: var(--white);
+
+    font-family: var(--heading-font);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    float: right;
+
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+
+    margin-left: 15px;
+}
+
+.nav-links a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Navigation Hover */
+
+.nav-links a:hover {
+    color: #b8e5d2;
+}
+
+
+/* Clear Float */
+
+.navbar::after {
+    content: "";
+
+    display: block;
+
+    clear: both;
+}
+
+
+/* =========================================
+   7. HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 35px 20px;
+
+    background-color: var(--hero-green);
+
+    background-image:
+        linear-gradient(
+            120deg,
+            rgba(20, 60, 48, 0.96),
+            rgba(40, 91, 75, 0.92)
+        );
+
+    overflow: hidden;
+}
+
+
+/* Hero Overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 225, 160, 0.16),
+            transparent 35%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 650px;
+}
+
+
+/* Hero Tag */
+
+.hero-tag {
+    color: #e8d7a8;
+
+    font-family: var(--heading-font);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Hero Heading */
+
+.hero h2 {
+    color: var(--white);
+
+    font-family: var(--heading-font);
+
+    font-size: 34px;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+
+/* Hero Description */
+
+.hero-description {
+    color: #f1f5f0;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   8. HERO BUTTON
+========================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background-color: var(--secondary);
+
+    color: var(--white);
+
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button Hover */
+
+.button:hover {
+    background-color: #0b5b5d;
+
+    border-color: #b9d9cf;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   9. COFFEE CUP ILLUSTRATION
+========================================= */
+
+.coffee-art {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 190px;
+
+    height: 180px;
+
+    right: 55px;
+
+    top: 60px;
+}
+
+
+/* Cup */
+
+.coffee-cup {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 110px;
+
+    height: 95px;
+
+    background-color: #f5f2e9;
+
+    border: 4px solid #d6ded5;
+
+    border-radius: 8px 8px 35px 35px;
+
+    top: 45px;
+
+    left: 35px;
+
+    overflow: hidden;
+}
+
+
+/* Coffee */
+
+.coffee {
+    position: absolute;
+
+    width: 100%;
+
+    height: 18px;
+
+    background-color: #79513b;
+
+    top: 0;
+
+    left: 0;
+}
+
+
+/* Cup Handle */
+
+.cup-handle {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 40px;
+
+    height: 45px;
+
+    border: 8px solid #f5f2e9;
+
+    border-radius: 50%;
+
+    top: 65px;
+
+    right: 5px;
+}
+
+
+/* Plate */
+
+.coffee-plate {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 155px;
+
+    height: 20px;
+
+    background-color: #e0d7c5;
+
+    border-radius: 50%;
+
+    bottom: 20px;
+
+    left: 10px;
+}
+
+
+/* Steam */
+
+.coffee-steam {
+    position: absolute;
+
+    width: 10px;
+
+    height: 35px;
+
+    border-left: 3px solid #e9e4d7;
+
+    border-radius: 50%;
+
+    top: 5px;
+}
+
+.steam-one {
+    left: 75px;
+}
+
+.steam-two {
+    left: 110px;
+
+    top: 0;
+}
+
+
+/* =========================================
+   10. COMMON SECTION
+========================================= */
+
+.section {
+    padding: 25px 15px;
+
+    margin: 0 10px;
+}
+
+
+/* Section Heading */
+
+.section h2 {
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Section Description */
+
+.section-description {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   11. ABOUT SECTION
+========================================= */
+
+.about {
+    background-color: var(--white);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.about p {
+    margin-bottom: 12px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   12. SERVICES SECTION
+========================================= */
+
+.services {
+    background-color: var(--white);
+}
+
+
+/* Card Container */
+
+.service-container {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* Common Card */
+
+.service-card {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: 31.8%;
+
+    min-height: 185px;
+
+    margin-right: 1.2%;
+
+    margin-bottom: 15px;
+
+    padding: 18px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid var(--border);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Remove extra margin */
+
+.service-card:last-child {
+    margin-right: 0;
+}
+
+
+/* Card Hover */
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   13. CARD VARIANT 1
+========================================= */
+
+.coffee-card {
+    border-radius: 12px;
+
+    background-color: #f1f7f5;
+
+    border: 1px solid #cbded8;
+}
+
+
+/* =========================================
+   14. CARD VARIANT 2
+========================================= */
+
+.food-card {
+    border-radius: 4px;
+
+    background-color: #fffaf0;
+
+    border: 3px solid var(--gold);
+}
+
+
+/* =========================================
+   15. CARD VARIANT 3
+========================================= */
+
+.study-card {
+    border-radius: 0;
+
+    background-color: #f5f9f7;
+
+    border: 3px solid #608b83;
+}
+
+
+/* =========================================
+   16. CARD ICON
+========================================= */
+
+.card-icon {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Card Heading */
+
+.service-card h3 {
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Card Paragraph */
+
+.service-card p {
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Card Link */
+
+.service-card a {
+    color: var(--secondary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* Card Link Hover */
+
+.service-card a:hover {
+    color: var(--primary);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   17. GALLERY SECTION
+========================================= */
+
+.gallery {
+    background-color: #f8faf9;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* Gallery Container */
+
+.gallery-container {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* Gallery Item */
+
+.gallery-item {
+    position: relative;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: 31.8%;
+
+    height: 155px;
+
+    margin-right: 1.2%;
+
+    margin-bottom: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+/* Remove extra margin */
+
+.gallery-item:last-child {
+    margin-right: 0;
+}
+
+
+/* Gallery Label */
+
+.gallery-item p {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 10px;
+
+    left: 12px;
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   18. GALLERY IMAGE 1
+========================================= */
+
+.gallery-one {
+    background-color: #dcebe1;
+}
+
+
+/* Sun */
+
+.gallery-sun {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 65px;
+
+    height: 35px;
+
+    background-color: #fff1bf;
+
+    border-radius: 50%;
+
+    top: 15px;
+
+    right: 20px;
+}
+
+
+/* Mountains */
+
+.gallery-mountain {
+    position: absolute;
+
+    width: 120%;
+
+    height: 90px;
+
+    bottom: 20px;
+
+    transform: rotate(-12deg);
+}
+
+
+/* Mountain A */
+
+.mountain-a {
+    z-index: 2;
+
+    background-color: #80a79a;
+
+    left: -20px;
+
+    bottom: 0;
+}
+
+
+/* Mountain B */
+
+.mountain-b {
+    z-index: 3;
+
+    background-color: #456f66;
+
+    right: -70px;
+
+    bottom: -30px;
+
+    transform: rotate(15deg);
+}
+
+
+/* =========================================
+   19. GALLERY IMAGE 2
+========================================= */
+
+.gallery-two {
+    background-color: #e8efe1;
+}
+
+
+/* Plant Circle */
+
+.gallery-circle {
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    background-color: #b7d1b0;
+
+    border-radius: 50%;
+
+    top: 20px;
+
+    left: 35%;
+}
+
+
+/* Leaves */
+
+.gallery-leaf {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 65px;
+
+    height: 35px;
+
+    background-color: #608b68;
+
+    border-radius: 100% 0 100% 0;
+}
+
+
+/* Leaf One */
+
+.leaf-one {
+    top: 35px;
+
+    left: 30%;
+}
+
+
+/* Leaf Two */
+
+.leaf-two {
+    top: 65px;
+
+    left: 45%;
+
+    transform: rotate(60deg);
+
+    background-color: #426e52;
+}
+
+
+/* =========================================
+   20. GALLERY IMAGE 3
+========================================= */
+
+.gallery-three {
+    background-color: #e9e3d6;
+}
+
+
+/* Gallery Cup */
+
+.gallery-cup {
+    position: absolute;
+
+    z-index: 3;
+
+    width: 85px;
+
+    height: 65px;
+
+    background-color: #fffaf0;
+
+    border: 4px solid #d3c7b4;
+
+    border-radius: 5px 5px 25px 25px;
+
+    top: 25px;
+
+    left: 35%;
+}
+
+
+/* Gallery Coffee */
+
+.gallery-coffee {
+    width: 100%;
+
+    height: 12px;
+
+    background-color: #79513b;
+}
+
+
+/* Gallery Handle */
+
+.gallery-handle {
+    position: absolute;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 7px solid #fffaf0;
+
+    border-radius: 50%;
+
+    top: 35px;
+
+    left: 58%;
+}
+
+
+/* =========================================
+   21. TESTIMONIAL
+========================================= */
+
+.testimonial {
+    margin-top: 10px;
+
+    padding: 18px;
+
+    background-color: #e2eee8;
+
+    border-left: 4px solid var(--secondary);
+
+    border-radius: 5px;
+
+    color: var(--primary);
+
+    font-size: 15px;
+}
+
+
+/* Testimonial Author */
+
+.testimonial span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   22. LOCATION
+========================================= */
+
+.location {
+    background-color: var(--white);
+}
+
+
+/* Location Box */
+
+.location-box {
+    padding: 18px;
+
+    background-color: #f2f7f4;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+/* Location Paragraph */
+
+.location-box p {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   23. CONTACT SECTION
+========================================= */
+
+.contact {
+    background-color: var(--white);
+
+    padding-bottom: 35px;
+}
+
+
+/* Contact Description */
+
+.contact > p {
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   24. FORM
+========================================= */
+
+form {
+    width: 100%;
+
+    padding: 5px;
+}
+
+
+/* Form Group */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+/* Form Label */
+
+label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* Input and Textarea */
+
+input,
+textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 11px;
+
+    background-color: #ffffff;
+
+    color: var(--text);
+
+    border: 1px solid #a9bbc7;
+
+    border-radius: 4px;
+
+    font-family: var(--body-font);
+
+    font-size: 14px;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Input Focus */
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: var(--secondary);
+
+    box-shadow: 0 0 0 3px rgba(8, 123, 125, 0.12);
+}
+
+
+/* Textarea */
+
+textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+/* =========================================
+   25. SUBMIT BUTTON
+========================================= */
+
+.submit-button {
+    padding: 11px 22px;
+
+    background-color: var(--secondary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-family: var(--body-font);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Submit Hover */
+
+.submit-button:hover {
+    background-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   26. FOOTER
+========================================= */
+
+.footer {
+    position: relative;
+
+    z-index: 5;
+
+    padding: 15px 20px;
+
+    background-color: var(--dark-green);
+
+    color: white;
+}
+
+
+/* Footer Text */
+
+.footer p {
+    display: inline-block;
+
+    font-family: var(--heading-font);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* Footer Links */
+
+.footer-links {
+    float: right;
+
+    list-style: none;
+}
+
+
+/* Footer List */
+
+.footer-links li {
+    display: inline-block;
+
+    margin-left: 15px;
+}
+
+
+/* Footer Anchor */
+
+.footer-links a {
+    color: white;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Footer Hover */
+
+.footer-links a:hover {
+    color: #b8e5d2;
+}
+
+
+/* Clear Float */
+
+.footer::after {
+    content: "";
+
+    display: block;
+
+    clear: both;
+}
+
+
+/* =========================================
+   27. ASSIGNMENT NOTE
+========================================= */
+
+.assignment-note {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    padding: 18px;
+
+    background-color: #deedf1;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    color: #31536a;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   28. RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .page-header {
+        padding: 20px 0;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        display: block;
+
+        margin-bottom: 12px;
+    }
+
+    .nav-links {
+        float: none;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+
+        margin-right: 12px;
+    }
+
+    .hero {
+        min-height: 350px;
+
+        padding: 25px 18px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .coffee-art {
+        right: 10px;
+
+        top: 180px;
+
+        transform: scale(0.7);
+
+        transform-origin: top right;
+
+        opacity: 0.8;
+    }
+
+    .service-card {
+        width: 48%;
+
+        margin-right: 1%;
+    }
+
+    .gallery-item {
+        width: 48%;
+
+        margin-right: 1%;
+    }
+
+    .footer p {
+        display: block;
+
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        float: none;
+    }
+
+    .footer-links li {
+        margin-left: 0;
+
+        margin-right: 12px;
+    }
+
+}
+
+
+/* =========================================
+   29. SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .website,
+    .page-header,
+    .assignment-note {
+        width: 95%;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .service-card {
+        display: block;
+
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+    .gallery-item {
+        display: block;
+
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+    .section {
+        padding: 20px 10px;
+    }
+
+    .section h2 {
+        font-size: 21px;
+    }
+
+    .coffee-art {
+        opacity: 0.35;
+    }
+
+}

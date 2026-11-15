@@ -1,0 +1,848 @@
+css
+/* ======================================
+   1. DESIGN TOKENS
+====================================== */
+
+:root {
+    --bg-color: #edf3f6;
+
+    --primary-color: #173d55;
+
+    --secondary-color: #087b7d;
+
+    --navbar-color: #153f43;
+
+    --hero-color: #dfeee5;
+
+    --card-color: #ffffff;
+
+    --text-color: #203e54;
+
+    --muted-color: #60788b;
+
+    --border-color: #cbd9e2;
+
+    --hover-color: #d2e8e5;
+
+    --font-heading: "Poppins", sans-serif;
+
+    --font-body: "Roboto", sans-serif;
+
+    --font-size: 16px;
+
+    --spacing-small: 10px;
+
+    --spacing-medium: 20px;
+
+    --spacing-large: 40px;
+
+    --radius: 10px;
+
+    --shadow: 0 8px 25px rgba(23, 61, 85, 0.08);
+}
+
+
+/* ======================================
+   2. RESET
+====================================== */
+
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* ======================================
+   3. BODY
+====================================== */
+
+body {
+    background-color: var(--bg-color);
+
+    color: var(--text-color);
+
+    font-family: var(--font-body);
+
+    font-size: var(--font-size);
+
+    line-height: 1.7;
+}
+
+
+/* ======================================
+   4. PAGE HEADER
+====================================== */
+
+.page-header {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 0;
+}
+
+.course {
+    color: var(--secondary-color);
+
+    font-family: var(--font-heading);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.page-header h1 {
+    color: var(--primary-color);
+
+    font-family: var(--font-heading);
+
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+.subtitle {
+    color: var(--muted-color);
+
+    font-size: 16px;
+}
+
+
+/* ======================================
+   5. NAVBAR
+====================================== */
+
+.navbar {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 15px 20px;
+
+    background-color: var(--navbar-color);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: var(--font-heading);
+
+    font-weight: 700;
+
+    font-size: 16px;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+
+    list-style: none;
+
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+.nav-links a:hover {
+    color: #8de0d6;
+}
+
+
+/* ======================================
+   6. HERO SECTION
+====================================== */
+
+.hero {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 255px;
+
+    padding: 30px 25px;
+
+    background-color: var(--hero-color);
+
+    border: 1px solid var(--border-color);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 700px;
+}
+
+.welcome {
+    color: var(--secondary-color);
+
+    font-family: var(--font-heading);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* Hero Heading */
+
+.hero h2 {
+    color: var(--primary-color);
+
+    font-family: var(--font-heading);
+
+    font-size: 32px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+/* Hero Paragraph */
+
+.hero-description {
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ======================================
+   7. BUTTON
+====================================== */
+
+.btn {
+    display: inline-block;
+
+    background-color: var(--secondary-color);
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button Hover */
+
+.btn:hover {
+    background-color: var(--primary-color);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* ======================================
+   8. PROFILE ILLUSTRATION
+====================================== */
+
+.profile {
+    position: relative;
+
+    width: 135px;
+
+    height: 155px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 5px;
+
+    background-color: #d9e8df;
+
+    flex-shrink: 0;
+}
+
+
+/* Profile Head */
+
+.profile-head {
+    position: absolute;
+
+    width: 40px;
+
+    height: 55px;
+
+    background-color: #8aa9a3;
+
+    border-radius: 50%;
+
+    top: 15px;
+
+    left: 45px;
+}
+
+
+/* Profile Body */
+
+.profile-body {
+    position: absolute;
+
+    width: 85px;
+
+    height: 105px;
+
+    background-color: #70938e;
+
+    border-radius: 50% 50% 35% 35%;
+
+    bottom: -30px;
+
+    left: 25px;
+}
+
+
+/* ======================================
+   9. COMMON SECTIONS
+====================================== */
+
+.section {
+    width: 88%;
+
+    max-width: 1100px;
+
+    margin: 35px auto;
+}
+
+
+/* Section Heading */
+
+.section h2 {
+    color: var(--primary-color);
+
+    font-family: var(--font-heading);
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Section Paragraph */
+
+.section p {
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ======================================
+   10. SKILLS
+====================================== */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* Skill Tags */
+
+.skills span {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background-color: var(--hero-color);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 20px;
+
+    color: var(--primary-color);
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Skill Hover */
+
+.skills span:hover {
+    background-color: var(--secondary-color);
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* ======================================
+   11. EDUCATION
+====================================== */
+
+.education-card {
+    padding: 20px;
+
+    background-color: var(--card-color);
+
+    border: 1px solid var(--border-color);
+
+    border-left: 5px solid var(--secondary-color);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* Education Heading */
+
+.education-card h3 {
+    font-family: var(--font-heading);
+
+    color: var(--primary-color);
+
+    margin-bottom: 8px;
+}
+
+
+/* ======================================
+   12. PROJECTS
+====================================== */
+
+.project-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* Project Card */
+
+.project-card {
+    background-color: var(--card-color);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Project Hover */
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(23, 61, 85, 0.15);
+}
+
+
+/* ======================================
+   13. PROJECT IMAGE
+====================================== */
+
+.project-image {
+    position: relative;
+
+    height: 130px;
+
+    margin: 12px;
+
+    overflow: hidden;
+
+    background-color: #dcebe1;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 5px;
+}
+
+
+/* Sun */
+
+.sun {
+    position: absolute;
+
+    width: 45px;
+
+    height: 28px;
+
+    background-color: #fff3c4;
+
+    border-radius: 50%;
+
+    top: 12px;
+
+    right: 25px;
+}
+
+
+/* Mountain One */
+
+.mountain-one {
+    position: absolute;
+
+    width: 75%;
+
+    height: 100%;
+
+    background-color: #79a195;
+
+    bottom: -50%;
+
+    left: -5%;
+
+    transform: rotate(-25deg);
+}
+
+
+/* Mountain Two */
+
+.mountain-two {
+    position: absolute;
+
+    width: 70%;
+
+    height: 100%;
+
+    background-color: #476e68;
+
+    bottom: -60%;
+
+    right: -5%;
+
+    transform: rotate(-25deg);
+}
+
+
+/* ======================================
+   14. PROJECT CONTENT
+====================================== */
+
+.project-content {
+    padding: 5px 15px 20px;
+}
+
+
+/* Project Title */
+
+.project-content h3 {
+    color: var(--primary-color);
+
+    font-family: var(--font-heading);
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Project Description */
+
+.project-content p {
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Project Link */
+
+.project-link {
+    color: var(--secondary-color);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Project Link Hover */
+
+.project-link:hover {
+    color: var(--primary-color);
+
+    text-decoration: underline;
+}
+
+
+/* ======================================
+   15. CONTACT
+====================================== */
+
+.contact {
+    margin-top: 40px;
+}
+
+.contact a {
+    color: var(--secondary-color);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.contact a:hover {
+    color: var(--primary-color);
+
+    text-decoration: underline;
+}
+
+
+/* ======================================
+   16. FOOTER
+====================================== */
+
+.footer {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    padding: 15px 20px;
+
+    background-color: var(--navbar-color);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Footer Text */
+
+.footer p {
+    font-family: var(--font-heading);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* Footer Navigation */
+
+.footer-links {
+    display: flex;
+
+    list-style: none;
+
+    gap: 18px;
+}
+
+
+/* Footer Links */
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Footer Hover */
+
+.footer-links a:hover {
+    color: #8de0d6;
+}
+
+
+/* ======================================
+   17. ASSIGNMENT NOTE
+====================================== */
+
+.assignment-note {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+    padding: 18px;
+
+    background-color: #deedf1;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: var(--radius);
+
+    color: #31536a;
+}
+
+
+/* ======================================
+   18. RESPONSIVE DESIGN
+====================================== */
+
+@media screen and (max-width: 768px) {
+
+    .page-header {
+        padding: 20px 0;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .profile {
+        margin: 15px 0 25px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+}
+
+
+/* ======================================
+   19. SMALL MOBILE
+====================================== */
+
+@media screen and (max-width: 480px) {
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        padding: 6px 12px;
+
+        font-size: 14px;
+    }
+
+    .assignment-note {
+        padding: 14px;
+    }
+
+}

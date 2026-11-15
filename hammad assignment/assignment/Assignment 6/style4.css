@@ -1,0 +1,1304 @@
+css
+/* ======================================
+   1. ROOT VARIABLES
+====================================== */
+
+:root {
+
+    --background: #edf3f6;
+
+    --primary: #173d55;
+
+    --secondary: #087b7d;
+
+    --dark-green: #153f43;
+
+    --light-green: #dfeee5;
+
+    --card-bg: #ffffff;
+
+    --text: #203e54;
+
+    --muted: #60788b;
+
+    --border: #cbd9e2;
+
+    --gold: #e2b24c;
+
+    --heading-font: "Poppins", sans-serif;
+
+    --body-font: "Roboto", sans-serif;
+
+    --small-space: 10px;
+
+    --medium-space: 20px;
+
+    --large-space: 35px;
+
+    --radius: 10px;
+
+    --shadow: 0 8px 20px rgba(20, 55, 50, 0.10);
+
+}
+
+
+/* ======================================
+   2. RESET
+====================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ======================================
+   3. BODY
+====================================== */
+
+body {
+
+    background-color: var(--background);
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    line-height: 1.6;
+
+}
+
+
+/* ======================================
+   4. COMMON HEADER
+====================================== */
+
+.assignment-header {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 0;
+
+}
+
+.assignment-header p:first-child {
+
+    color: var(--secondary);
+
+    font-family: var(--heading-font);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.assignment-header h1 {
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 30px;
+
+    margin: 5px 0;
+
+}
+
+.assignment-header p:last-child {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+}
+
+
+/* ======================================
+   5. MENU NAVBAR
+====================================== */
+
+.menu-navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 15px 20px;
+
+    background-color: var(--dark-green);
+
+}
+
+
+/* Menu Logo */
+
+.menu-logo {
+
+    color: white;
+
+    font-family: var(--heading-font);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+/* Menu Links */
+
+.menu-links {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 20px;
+
+    list-style: none;
+
+}
+
+
+/* Menu Link */
+
+.menu-links a {
+
+    color: white;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+/* Menu Hover */
+
+.menu-links a:hover {
+
+    color: #b8e5d2;
+
+}
+
+
+/* Menu Description */
+
+.page-description {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 15px auto;
+
+    color: var(--muted);
+
+}
+
+
+/* ======================================
+   6. LOGIN PAGE
+====================================== */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background-color: var(--background);
+
+}
+
+
+/* Login Heading */
+
+.login-heading {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+.login-heading h1 {
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 30px;
+
+}
+
+.login-heading p {
+
+    color: var(--muted);
+
+}
+
+
+/* Login Container */
+
+.login-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 500px;
+
+    padding: 30px;
+
+    background-color: var(--light-green);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+}
+
+
+/* Login Card */
+
+.login-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    width: 100%;
+
+    max-width: 380px;
+
+    padding: 30px;
+
+    background-color: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+/* Login Heading */
+
+.login-card h2 {
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* Login Subtitle */
+
+.login-subtitle {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Login Group */
+
+.login-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Login Label */
+
+.login-group label {
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+
+}
+
+
+/* Login Input */
+
+.login-group input {
+
+    width: 100%;
+
+    padding: 11px;
+
+    background-color: white;
+
+    border: 1px solid #a9bbc7;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+}
+
+
+/* Input Focus */
+
+.login-group input:focus {
+
+    outline: none;
+
+    border-color: var(--secondary);
+
+    box-shadow: 0 0 0 3px rgba(8, 123, 125, 0.12);
+
+}
+
+
+/* Login Options */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+}
+
+
+/* Remember Me */
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+/* Login Option Link */
+
+.login-options a {
+
+    color: var(--secondary);
+
+    text-decoration: none;
+
+}
+
+
+/* Login Button */
+
+.login-button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: var(--secondary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+/* Login Hover */
+
+.login-button:hover {
+
+    background-color: var(--primary);
+
+}
+
+
+/* Signup Text */
+
+.signup-text {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+}
+
+
+/* Signup Link */
+
+.signup-text a {
+
+    color: var(--secondary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+/* ======================================
+   7. PRODUCTS PAGE
+====================================== */
+
+.products-section {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 0;
+
+}
+
+
+/* Product Heading */
+
+.products-section h2 {
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 24px;
+
+}
+
+
+/* Product Description */
+
+.products-description {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Product Container */
+
+.product-container {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+
+/* Product Card */
+
+.product-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    flex-basis: 220px;
+
+    max-width: calc(25% - 12px);
+
+    padding: 12px;
+
+    background-color: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Product Hover */
+
+.product-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+
+    border-color: var(--secondary);
+
+}
+
+
+/* Product Image */
+
+.product-image {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+
+    height: 125px;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    background-color: #dcebe1;
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+}
+
+
+/* Product Image Number */
+
+.product-image span {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    background-color: #fff1bf;
+
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* Different Image Backgrounds */
+
+.image-one {
+
+    background: linear-gradient(135deg, #dcebe1, #b8d0c0);
+
+}
+
+.image-two {
+
+    background: linear-gradient(135deg, #e8e1d3, #c4d7cb);
+
+}
+
+.image-three {
+
+    background: linear-gradient(135deg, #d7e7e2, #b4cfc6);
+
+}
+
+.image-four {
+
+    background: linear-gradient(135deg, #e5e9dc, #b8cbb9);
+
+}
+
+.image-five {
+
+    background: linear-gradient(135deg, #e8e1d3, #c6d8c8);
+
+}
+
+.image-six {
+
+    background: linear-gradient(135deg, #dcebe1, #b9d0c7);
+
+}
+
+.image-seven {
+
+    background: linear-gradient(135deg, #e2e8d9, #b7cdbb);
+
+}
+
+.image-eight {
+
+    background: linear-gradient(135deg, #d9e7e3, #b9d0c5);
+
+}
+
+
+/* Product Title */
+
+.product-card h3 {
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* Product Description */
+
+.product-card p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Product Bottom */
+
+.product-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: auto;
+
+}
+
+
+/* Product Price */
+
+.product-bottom strong {
+
+    color: var(--primary);
+
+    font-size: 15px;
+
+}
+
+
+/* Product Button */
+
+.product-bottom button {
+
+    padding: 6px 14px;
+
+    background-color: var(--secondary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+}
+
+
+/* Product Button Hover */
+
+.product-bottom button:hover {
+
+    background-color: var(--primary);
+
+}
+
+
+/* ======================================
+   8. NAVBAR HERO PAGE
+====================================== */
+
+.hero-navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 15px 20px;
+
+    background-color: var(--dark-green);
+
+}
+
+
+/* Hero Logo */
+
+.hero-logo {
+
+    color: white;
+
+    font-family: var(--heading-font);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+/* Hero Links */
+
+.hero-links {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 20px;
+
+    list-style: none;
+
+}
+
+
+/* Hero Link */
+
+.hero-links a {
+
+    color: white;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+}
+
+
+/* Hero Link Hover */
+
+.hero-links a:hover {
+
+    color: #b8e5d2;
+
+}
+
+
+/* ======================================
+   9. CAMPUS HERO
+====================================== */
+
+.campus-hero {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 420px;
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+    background-color: var(--light-green);
+
+    border: 1px solid var(--border);
+
+    border-radius: 0 0 10px 10px;
+
+    overflow: hidden;
+
+}
+
+
+/* Hero Text */
+
+.hero-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+}
+
+
+/* Hero Label */
+
+.hero-label {
+
+    color: var(--secondary);
+
+    font-family: var(--heading-font);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* Hero Heading */
+
+.hero-text h2 {
+
+    color: var(--primary);
+
+    font-family: var(--heading-font);
+
+    font-size: 38px;
+
+    line-height: 1.4;
+
+}
+
+
+/* Hero Paragraph */
+
+.hero-text p {
+
+    color: var(--text);
+
+    font-size: 16px;
+
+}
+
+
+/* Explore Button */
+
+.explore-button {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 12px 35px;
+
+    background-color: var(--secondary);
+
+    color: white;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Explore Hover */
+
+.explore-button:hover {
+
+    background-color: var(--primary);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ======================================
+   10. HERO DECORATION
+====================================== */
+
+.hero-decoration {
+
+    position: absolute;
+
+    z-index: 1;
+
+    border-radius: 50%;
+
+}
+
+
+/* Decoration One */
+
+.decoration-one {
+
+    width: 180px;
+
+    height: 180px;
+
+    background-color: #c3d9c9;
+
+    top: -60px;
+
+    left: -50px;
+
+}
+
+
+/* Decoration Two */
+
+.decoration-two {
+
+    width: 250px;
+
+    height: 250px;
+
+    background-color: #b2cfc2;
+
+    right: -80px;
+
+    bottom: -100px;
+
+}
+
+
+/* ======================================
+   11. FOOTER
+====================================== */
+
+.campus-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    padding: 18px 20px;
+
+    background-color: var(--dark-green);
+
+    color: white;
+
+    font-size: 13px;
+
+}
+
+
+/* ======================================
+   12. RESPONSIVE DESIGN
+====================================== */
+
+@media screen and (max-width: 900px) {
+
+
+    /* Product Cards */
+
+    .product-card {
+
+        flex-basis: 30%;
+
+        max-width: calc(33.333% - 10px);
+
+    }
+
+
+    /* Hero Heading */
+
+    .hero-text h2 {
+
+        font-size: 32px;
+
+    }
+
+
+}
+
+
+/* ======================================
+   13. TABLET DESIGN
+====================================== */
+
+@media screen and (max-width: 650px) {
+
+
+    /* Header */
+
+    .assignment-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    /* Navbar */
+
+    .menu-navbar,
+    .hero-navbar {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    /* Links */
+
+    .menu-links,
+    .hero-links {
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+    }
+
+
+    /* Product Cards */
+
+    .product-card {
+
+        flex-basis: 45%;
+
+        max-width: calc(50% - 8px);
+
+    }
+
+
+    /* Campus Hero */
+
+    .campus-hero {
+
+        min-height: 350px;
+
+    }
+
+
+    /* Hero Heading */
+
+    .hero-text h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    /* Footer */
+
+    .campus-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+    }
+
+
+}
+
+
+/* ======================================
+   14. MOBILE DESIGN
+====================================== */
+
+@media screen and (max-width: 450px) {
+
+
+    /* Product Container */
+
+    .product-container {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    /* Product Card */
+
+    .product-card {
+
+        flex-basis: auto;
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    /* Login Card */
+
+    .login-card {
+
+        padding: 22px;
+
+    }
+
+
+    /* Login Container */
+
+    .login-container {
+
+        padding: 15px;
+
+    }
+
+
+    /* Hero Heading */
+
+    .hero-text h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    /* Hero Paragraph */
+
+    .hero-text p {
+
+        font-size: 14px;
+
+    }
+
+
+    /* Menu Links */
+
+    .menu-links,
+    .hero-links {
+
+        gap: 12px;
+
+    }
+
+
+}

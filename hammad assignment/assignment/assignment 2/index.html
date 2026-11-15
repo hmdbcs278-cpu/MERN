@@ -1,0 +1,474 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Student internship application form">
+
+    <title>Internship Application Form</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header class="page-header">
+
+        <p class="course-info">
+            BTECH YEAR 1 / HTML & CSS / ASSIGNMENT 03
+        </p>
+
+        <h1>The Ultimate Form</h1>
+
+        <p class="subtitle">
+            Week 4 · Complete single-column form · Internship Application
+        </p>
+
+    </header>
+
+    <!-- Main Form Container -->
+    <main class="form-container">
+
+        <!-- Browser Window Header -->
+        <div class="browser-header">
+
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+            <span class="browser-title">
+                03-form/index.html
+            </span>
+
+        </div>
+
+        <!-- Application Form -->
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <div class="form-content">
+
+                <h2>Application Form</h2>
+
+                <p class="form-description">
+                    Student internship application ·
+                    <span class="required-text">*</span> Required
+                </p>
+
+                <!-- Personal Details -->
+                <fieldset>
+
+                    <legend>Personal Details</legend>
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full name <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            minlength="3"
+                            maxlength="50"
+                            pattern="[A-Za-z ]{3,50}"
+                            title="Enter a name using letters and spaces"
+                            required>
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="yourname@example.com"
+                            required>
+
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password <span>*</span>
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter password"
+                            minlength="8"
+                            maxlength="20"
+                            pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,20}"
+                            title="Password must contain at least 8 characters and a number"
+                            required>
+
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="9876543210"
+                            pattern="[0-9]{10}"
+                            minlength="10"
+                            maxlength="10"
+                            title="Enter a 10-digit phone number"
+                            required>
+
+                    </div>
+
+                    <!-- Portfolio URL -->
+                    <div class="form-group">
+
+                        <label for="portfolio">
+                            Portfolio URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="portfolio"
+                            name="portfolio"
+                            placeholder="https://example.com">
+
+                    </div>
+
+                    <!-- Age -->
+                    <div class="form-group">
+
+                        <label for="age">
+                            Age <span>*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            placeholder="Enter your age"
+                            min="16"
+                            max="60"
+                            required>
+
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group">
+
+                        <span class="group-label">
+                            Gender:
+                        </span>
+
+                        <div class="inline-options">
+
+                            <label for="male">
+                                <input
+                                    type="radio"
+                                    id="male"
+                                    name="gender"
+                                    value="male"
+                                    required>
+                                Male
+                            </label>
+
+                            <label for="female">
+                                <input
+                                    type="radio"
+                                    id="female"
+                                    name="gender"
+                                    value="female">
+                                Female
+                            </label>
+
+                            <label for="other">
+                                <input
+                                    type="radio"
+                                    id="other"
+                                    name="gender"
+                                    value="other">
+                                Other / Prefer not to say
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- Education -->
+                <fieldset>
+
+                    <legend>Education</legend>
+
+                    <!-- Course -->
+                    <div class="form-group">
+
+                        <label for="course">
+                            Course <span>*</span>
+                        </label>
+
+                        <select
+                            id="course"
+                            name="course"
+                            required>
+
+                            <option value="">
+                                Select your course
+                            </option>
+
+                            <option value="btech-cse">
+                                BTech — Computer Science
+                            </option>
+
+                            <option value="btech-it">
+                                BTech — Information Technology
+                            </option>
+
+                            <option value="bca">
+                                Bachelor of Computer Applications
+                            </option>
+
+                            <option value="bsc">
+                                BSc Computer Science
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- City Datalist -->
+                    <div class="form-group">
+
+                        <label for="city">
+                            Preferred city (datalist)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            list="city-list"
+                            placeholder="Choose or enter a city">
+
+                        <datalist id="city-list">
+
+                            <option value="Delhi">
+                            <option value="Mumbai">
+                            <option value="Bangalore">
+                            <option value="Hyderabad">
+                            <option value="Pune">
+                            <option value="Moradabad">
+
+                        </datalist>
+
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="form-group">
+
+                        <span class="group-label">
+                            Skills:
+                        </span>
+
+                        <div class="inline-options">
+
+                            <label for="html">
+                                <input
+                                    type="checkbox"
+                                    id="html"
+                                    name="skills"
+                                    value="HTML">
+                                HTML
+                            </label>
+
+                            <label for="css">
+                                <input
+                                    type="checkbox"
+                                    id="css"
+                                    name="skills"
+                                    value="CSS">
+                                CSS
+                            </label>
+
+                            <label for="javascript">
+                                <input
+                                    type="checkbox"
+                                    id="javascript"
+                                    name="skills"
+                                    value="JavaScript">
+                                JavaScript
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- Upload and Extras -->
+                <fieldset>
+
+                    <legend>Upload & Extras</legend>
+
+                    <!-- Available Date -->
+                    <div class="form-group">
+
+                        <label for="available">
+                            Available from
+                        </label>
+
+                        <input
+                            type="date"
+                            id="available"
+                            name="available"
+                            min="2026-01-01">
+
+                    </div>
+
+                    <!-- Interview Time -->
+                    <div class="form-group">
+
+                        <label for="interview">
+                            Interview time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="interview"
+                            name="interview">
+
+                    </div>
+
+                    <!-- Resume -->
+                    <div class="form-group">
+
+                        <label for="resume">
+                            Resume <span>*</span>
+                        </label>
+
+                        <input
+                            type="file"
+                            id="resume"
+                            name="resume"
+                            accept=".pdf,.doc,.docx"
+                            required>
+
+                    </div>
+
+                    <!-- Expected Stipend -->
+                    <div class="form-group">
+
+                        <label for="stipend">
+                            Expected monthly stipend:
+            ₹<output id="stipend-value">10000</output>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="stipend"
+                            name="stipend"
+                            min="5000"
+                            max="20000"
+                            step="1000"
+                            value="10000"
+                            oninput="document.getElementById('stipend-value').value=this.value">
+
+                    </div>
+
+                    <!-- Favourite Color -->
+                    <div class="form-group color-group">
+
+                        <label for="color">
+                            Favourite colour:
+                        </label>
+
+                        <input
+                            type="color"
+                            id="color"
+                            name="color"
+                            value="#14777b">
+
+                    </div>
+
+                    <!-- Why Join -->
+                    <div class="form-group">
+
+                        <label for="reason">
+                            Why would you like to join?
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            name="reason"
+                            rows="5"
+                            minlength="10"
+                            maxlength="500"
+                            placeholder="Write about your interest in this internship..."
+                            required></textarea>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- Form Buttons -->
+                <div class="form-buttons">
+
+                    <button type="submit">
+                        Submit Application
+                    </button>
+
+                    <button type="reset" class="reset-button">
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Use linked labels, required fields and validation attributes.
+        </p>
+
+        <p>
+            HTML & CSS Assignment 03 | Internship Application Form
+        </p>
+
+        <p>
+            Created by Krishna Gupta
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,526 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Personal portfolio of Krishna Gupta, a first-year Computer Science Engineering student.">
+
+    <meta name="author"
+          content="Hammad khan ">
+
+    <title>Hammad khan | Personal Portfolio</title>
+
+    <!-- CSS Styling -->
+    <style>
+
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 5px 0;
+            color: #e0e7ff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1e293b;
+            text-align: center;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Horizontal Line */
+        hr {
+            border: none;
+            height: 3px;
+            background-color: #2563eb;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #2563eb;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Headings */
+        h2 {
+            color: #1e40af;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #2563eb;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 3px solid #dbeafe;
+        }
+
+        /* Profile Image */
+        #about img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            border: 4px solid #2563eb;
+        }
+
+        /* Lists */
+        ul,
+        ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        ul li::marker {
+            color: #2563eb;
+        }
+
+        ol li::marker {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Definition List */
+        dt {
+            color: #1e40af;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        dd {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        /* Project Cards */
+        article {
+            background-color: #f8fafc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #dbeafe;
+            transition: 0.3s;
+        }
+
+        article:hover {
+            background-color: #eff6ff;
+            border-color: #2563eb;
+        }
+
+        article h3 {
+            margin-top: 0;
+        }
+
+        /* Links */
+        a {
+            color: #2563eb;
+        }
+
+        #contact a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #cbd5e1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav {
+                position: static;
+                line-height: 2.5;
+            }
+
+            nav a {
+                margin: 5px 8px;
+                display: inline-block;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Hammad khan</h1>
+
+        <p>
+            BTech Computer Science Engineering Student
+        </p>
+
+        <p>
+            Learning HTML, CSS and Web Development.
+        </p>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#skills">Skills</a> |
+        <a href="#education">Education</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Home Section -->
+        <section id="home">
+
+            <h2>Welcome to My Portfolio</h2>
+
+            <p>
+                Hello! I am Hammad khan.
+                I am a first-year Computer Science Engineering
+                student and interested in learning new technologies.
+            </p>
+
+            <p>
+                My goal is to become a skilled web developer
+                and create useful websites.
+            </p>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <img
+                src="profile.jpg"
+                alt="Profile photograph of Hammad khan"
+                width="150"
+                height="150">
+
+            <p>
+                I am Hammad khan, a first-year BTech student
+                studying Computer Science Engineering.
+            </p>
+
+            <p>
+                I enjoy learning HTML, exploring computer
+                technology and solving programming problems.
+                I am currently developing my skills in
+                web development.
+            </p>
+
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML Fundamentals</li>
+                <li>Basic Computer Knowledge</li>
+                <li>Git and GitHub</li>
+                <li>Problem Solving</li>
+                <li>Learning Web Development</li>
+            </ul>
+
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+
+            <h2>Education</h2>
+
+            <ul>
+                <li>
+                    BTech in Computer Science Engineering
+                    <ul>
+                        <li>First Year Student</li>
+                        <li>2026 - 2030</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Class XII
+                    <ul>
+                        <li>Completed in 2026</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- College and Course -->
+        <section id="college">
+
+            <h2>My College / My Course</h2>
+
+            <h3>Learning Activities</h3>
+
+            <ul>
+                <li>Web Development</li>
+                <li>Programming Fundamentals</li>
+                <li>Computer Science Practical</li>
+                <li>Library and Coding Lab</li>
+            </ul>
+
+            <h3>My Learning Sequence</h3>
+
+            <ol>
+                <li>Learn HTML Structure</li>
+                <li>Understand CSS Styling</li>
+                <li>Practice JavaScript</li>
+                <li>Create Web Projects</li>
+            </ol>
+
+            <h3>Web Development Concepts</h3>
+
+            <dl>
+
+                <dt>HTML</dt>
+                <dd>
+                    HTML is used to structure the content
+                    of a web page.
+                </dd>
+
+                <dt>CSS</dt>
+                <dd>
+                    CSS is used to design and style
+                    a web page.
+                </dd>
+
+                <dt>JavaScript</dt>
+                <dd>
+                    JavaScript makes web pages interactive.
+                </dd>
+
+            </dl>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+
+            <h2>My Projects</h2>
+
+            <article>
+
+                <h3>My First Web Page</h3>
+
+                <img
+                    src="project.jpg"
+                    alt="Preview of my first HTML web page"
+                    width="250"
+                    height="150">
+
+                <p>
+                    This is my first HTML project.
+                    It contains headings, paragraphs,
+                    links and lists.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    This portfolio website is created
+                    using HTML.
+                </p>
+
+                <p>
+                    It includes my introduction,
+                    education, skills and projects.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                If you want to connect with me,
+                you can contact me using the details below.
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:hmdkhan1230@gmail.com">
+                    your-email@example.com
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/hmdbcs278-cpu">
+                    My GitHub Profile
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Hammad khan.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Personal Portfolio | HTML Assignment 01
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
